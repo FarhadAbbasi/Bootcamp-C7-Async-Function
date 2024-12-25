@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
 
-function AppTryCatch() {
+function AppAsyncAwait() {
   console.log("Before preparing food")
 
   function prepareFood(data) {
@@ -45,25 +43,19 @@ function AppTryCatch() {
     return promise;
   }
 
-  //<<--------------------  "TRY, CATCH" FUNCTION ----------------->> 
+  //<<--------------------  "ASYNC, AWAIT" FUNCTION ----------------->> 
 
   async function startProcess(params) {  // Async will be used in declaration.
 
-    try {                     // This will try executing the function to see if there isn't an error.
-      let foodValue = await prepareFood(1);
-      console.log("Food response: ", foodValue);
-      let toastValue = await prepareToast(2);
-      console.log("Toast response: ", toastValue)
-      let teaValue = await prepareTea();
-      console.log("Tea response: ", teaValue)
-    }
-    catch (error) {     // And if there's an error, catch will abort the "process" and through the error alert.
-      console.log("Error in catch: ", error)
-    }
+    let foodValue = await prepareFood();         // Await will always be used within Async and while calling the function.
+    console.log("Food response: ", foodValue);  // This line will not be executed untill "prepareFood" job is finished.
+    let toastValue = await prepareToast();
+    console.log("Toast response: ", toastValue)
+    let teaValue = await prepareTea();
+    console.log("Tea response: ", teaValue)
   }
-
   startProcess();
-  //<<----  With "ASYNC-AWAIT & TRY-CATCH",  We have greatly simplified the visibility as compared to the "PromiseS>Then". ----->> 
+  //<<--------------------   With "ASYNC-AWAIT",  We don't need to call "Promise > Then" anymore. ----------------->> 
 
 
 
@@ -77,4 +69,4 @@ function AppTryCatch() {
   );
 }
 
-export default AppTryCatch;
+export default AppAsyncAwait;

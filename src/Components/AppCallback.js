@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 
 function AppCallback() {
   console.log("Before preparing food")

@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import AppPyramid from './AppCallback';
-import AppCallback from './AppCallback';
-import AppPromise from './AppPromise';
-import AppAsyncAwait from './AppAsyncAwait';
-import AppTryCatch from './AppTryCatch';
+import AppPyramid from './Components/AppCallback';
+import AppCallback from './Components/AppCallback';
+import AppPromise from './Components/AppPromise';
+import AppAsyncAwait from './Components/AppAsyncAwait';
+import AppTryCatch from './Components/AppTryCatch';
 
 function App() {
   // console.log("Before preparing food")

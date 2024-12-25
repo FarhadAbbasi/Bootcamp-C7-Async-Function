@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 
 function AppPromise() {
   console.log("Before preparing food")
